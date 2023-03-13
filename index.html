@@ -9,6 +9,29 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" integrity="sha512-Dqf5696xtofgH089BgZJo2lSWTvev4GFo+gA2o4GullFY65rzQVQLQVlzLvYwTo0Bb2Gpb6IqwxYWtoMonfdhQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" integrity="sha512-st608h+ZqzliahyzEpETxzU0f7z7a9acN6AFvYmHvpFhmcFuKT8a22TT5TpKpjDa3pt3Wv7Z3SdQBCBdDPhyWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" integrity="sha512-/kVH1uXuObC0iYgxxCKY41JdWOkKOxorFVmip+YVifKsJ4Au/87EisD1wty7vxN2kAhnWh6Yc8o/dSAXj6Oz7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script id="snippet-tpl" type="text/x-jquery-tmpl">
+            &lt;!-- Add code before the end of &lt;/body&gt; tag --&gt;
+            &lt;div id="contact_widget_substrate"&gt;&lt;/div&gt;
+            &lt;div id="contact_widget_button" class="contact_widget_left d-flex align-items-center justify-content-center"&gt;
+                &lt;div class="contact-widget-pulsation"&gt;&lt;/div&gt;
+                &lt;div class="contact-widget-icon text-center d-flex align-items-center justify-content-center"&gt;&lt;i class="fa fas fa-envelope"&gt;&lt;/i&gt;&lt;span class="contact-widget-text d-none"&gt;Contact button&lt;/span&gt;&lt;/div&gt;
+                &lt;div class="contact-widget-dropdown d-flex flex-column align-items-start"&gt;
+                    &lt;a rel="noopener noreferrer" href="https://ig.me/m/${instagram}" target="_blank" class="contact-widget-item d-flex align-items-center"&gt;&lt;span class="contact-widget-item-icon contact-widget-instagram d-flex align-items-center justify-content-center"&gt;&lt;i class="fab fa-instagram"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;Instagram&lt;/span&gt;&lt;/a&gt;
+                    &lt;a rel="noopener noreferrer" href="https://m.me/${messanger}" target="_blank" class="contact-widget-item d-flex align-items-center"&gt;&lt;span class="contact-widget-item-icon contact-widget-messenger d-flex align-items-center justify-content-center"&gt;&lt;i class="fab fa-facebook-messenger"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;Messenger&lt;/span&gt;&lt;/a&gt;
+                    &lt;a rel="noopener noreferrer" href="https://wa.me/${whatsapp}" target="_blank" class="contact-widget-item d-flex align-items-center"&gt;&lt;span class="contact-widget-item-icon contact-widget-whatsapp d-flex align-items-center justify-content-center"&gt;&lt;i class="fab fa-whatsapp"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;WhatsApp&lt;/span&gt;&lt;/a&gt;
+                    &lt;a rel="noopener noreferrer" href="https://t.me/${telegram}" target="_blank" class="contact-widget-item d-flex align-items-center"&gt;&lt;span class="contact-widget-item-icon contact-widget-telegram d-flex align-items-center justify-content-center"&gt;&lt;i class="fab fa-telegram"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;Telegram&lt;/span&gt;&lt;/a&gt;
+                    &lt;a rel="noopener noreferrer" href="viber://pa?chatURI=${viber}" target="_blank" class="contact-widget-item d-flex align-items-center contact-widget-viber-desktop"&gt;&lt;span class="contact-widget-item-icon contact-widget-viber d-flex align-items-center justify-content-center"&gt;&lt;i class="fa-phone-square fab fa-viber"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;Viber&lt;/span&gt;&lt;/a&gt;
+                    &lt;a rel="noopener noreferrer" href="viber://pa?chatURI=${viber}" target="_blank" class="contact-widget-item d-flex align-items-center contact-widget-viber-mobile"&gt;&lt;span class="contact-widget-item-icon contact-widget-viber d-flex align-items-center justify-content-center"&gt;&lt;i class="fa-phone-square fab fa-viber"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;Viber&lt;/span&gt;&lt;/a&gt;
+                    &lt;a rel="noopener noreferrer" href="mailto:${email}" class="contact-widget-item d-flex align-items-center"&gt;&lt;span class="contact-widget-item-icon contact-widget-email d-flex align-items-center justify-content-center"&gt;&lt;i class="far fa-envelope fa fa-envelope-open"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;${email}&lt;/span&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet" media="screen" /&gt;
+            &lt;link href="https://widget.rushsender.com/css/contacts-button-widget.css" rel="stylesheet" media="screen" /&gt;
+            &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"&gt;&lt;/script&gt;
+            &lt;script src="https://widget.rushsender.com/js/contacts-button-widget.js"&gt;&lt;/script&gt;
+        </script>
     </head>
     <body>
 
@@ -17,7 +40,7 @@
                 Prism.plugins = {};
             }
             
-            var social = {
+            window.social = {
                 instagram: "rushsender",
                 messanger: "rushsender",
                 whatsapp: "31626340975",
@@ -52,6 +75,8 @@
             </code>
         </pre>
 
+
+        <!-- Add code before the end of </body> tag -->
         <div id="contact_widget_substrate"></div>
         <div id="contact_widget_button" class="contact_widget_left d-flex align-items-center justify-content-center">
             <div class="contact-widget-pulsation"></div>
@@ -71,5 +96,6 @@
         <link href="https://widget.rushsender.com/css/contacts-button-widget.css" rel="stylesheet" media="screen" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://widget.rushsender.com/js/contacts-button-widget.js"></script>
+                
     </body>
 </html>
