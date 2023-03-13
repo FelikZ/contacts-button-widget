@@ -14,6 +14,7 @@
 #contact_widget_button .d-none {display: none !important;}
 #contact_widget_button .align-items-start {-ms-flex-align: start !important;align-items: flex-start !important;}
 #contact_widget_button .flex-column {-ms-flex-direction: column !important;flex-direction: column !important;}
+#contact_widget_button a { text-decoration: none !important; }
 
 @-webkit-keyframes pulsation { 0%{-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);opacity:1} 50%{opacity:.5} to{-ms-transform:scale(1);-webkit-transform:scale(1);transform:scale(1);opacity:0}}
 @keyframes pulsation { 0%{-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);opacity:1} 50%{opacity:.5} to{-ms-transform:scale(1);-webkit-transform:scale(1);transform:scale(1);opacity:0}}
