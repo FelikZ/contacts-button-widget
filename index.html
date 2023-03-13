@@ -61,9 +61,11 @@
             window.social.email = window.social.email;
 
             $(document).ready(function() {
-                let html = $('#code').loadTemplate($('#snippet-tpl'), window.social).html();
-                $('#code').html(Prism.highlight(html, Prism.languages.markup, 'markup'));
-                $('body').append(html);
+                setTimeout(function() {
+                    let html = $('#code').loadTemplate($('#snippet-tpl'), window.social).html();
+                    $('#code').html(Prism.highlight(html, Prism.languages.markup, 'markup'));
+                    $('#example_widget').html(html);
+                }, 500);
             });
         </script>
 
@@ -71,7 +73,7 @@
             <code id="code" class="language-markup code-toolbar">
             </code>
         </pre>
+
+        <div id="example_widget"></div>
     </body>
 </html>
-
-<!-- $('#code').html(Prism.highlight($('#code').loadTemplate($('#snippet-tpl'), window.social).html(), Prism.languages.markup, 'markup')); -->
