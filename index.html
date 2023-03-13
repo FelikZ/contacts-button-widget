@@ -38,15 +38,10 @@
             if (!Prism.plugins) {
                 Prism.plugins = {};
             }
-            
-            window.social = {
-                instagram: "rushsender",
-                messanger: "rushsender",
-                whatsapp: "31626340975",
-                telegram: "RushWeB_bot",
-                viber: "rushsender",
-                email: "info@rushsender.com"
-            };
+
+            let params = new URLSearchParams(window.location.search);
+            let entries = params.entries();
+            window.social = Object.fromEntries(entries);
 
             window.social.instagram = 'https://ig.me/m/' + window.social.instagram;
             window.social.messanger = 'https://m.me/' + window.social.messanger;
