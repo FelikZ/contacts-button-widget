@@ -39,6 +39,7 @@
                     <a rel="noopener noreferrer" href="$instagram" target="_blank" class="contact-widget-item d-flex align-items-center justify-content-center"><span class="contact-widget-item-icon contact-widget-instagram d-flex align-items-center justify-content-center"><i class="fab fa-instagram"></i></span></a>
                     <a rel="noopener noreferrer" href="$messanger" target="_blank" class="contact-widget-item d-flex align-items-center justify-content-center"><span class="contact-widget-item-icon contact-widget-messenger d-flex align-items-center justify-content-center"><i class="fab fa-facebook-messenger"></i></span></a>
                     <a rel="noopener noreferrer" href="mailto:$email" class="contact-widget-item d-flex align-items-center"><span class="contact-widget-item-icon contact-widget-email d-flex align-items-center justify-content-center"><i class="far fa-envelope fa fa-envelope-open"></i></span></a>
+                    <a rel="noopener noreferrer" href="tel:$phone" class="contact-widget-item d-flex align-items-center"><span class="contact-widget-item-icon contact-widget-call d-flex align-items-center justify-content-center"><i class="far fa-phone fa fa-envelope-open"></i></span></a>
                 </div>
             </div>
 
@@ -67,6 +68,7 @@
             window.social.telegram = 'https://t.me/' + window.social.telegram;
             window.social.viber = 'viber://pa?chatURI=' + window.social.viber;
             window.social.email = window.social.email;
+            window.social.phone = window.social.phone;
 
             $(document).ready(function() {
                 setTimeout(function() {
@@ -77,6 +79,7 @@
                     html = html.replaceAll('$telegram', window.social.telegram);
                     html = html.replaceAll('$viber', window.social.viber);
                     html = html.replaceAll('$email', window.social.email);
+                    html = html.replaceAll('$phone', window.social.phone);
 
                     $('#code').html(Prism.highlight(html, Prism.languages.markup, 'markup'));
                     $('#example_widget').html(html);
