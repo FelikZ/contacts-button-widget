@@ -1,0 +1,71 @@
+/*
+ * https://github.com/axxler/contacts-button-widget
+ */
+
+/* [START] Contact widget button */
+#contact_widget_button {font-family: sans-serif; font-size: 14px; line-height: 1.15;}
+#contact_widget_button * {outline: none;}
+#contact_widget_button *, #contact_widget_button *::before, #contact_widget_button *::after {box-sizing: border-box;}
+#contact_widget_button .text-center {text-align: center !important;}
+#contact_widget_button .align-items-center {-ms-flex-align: center !important;align-items: center !important;}
+#contact_widget_button .justify-content-center {-ms-flex-pack: center !important;justify-content: center !important;}
+#contact_widget_button {display: -ms-flexbox !important;display: -webkit-flex !important;display: flex !important;}
+#contact_widget_button .d-flex {display: -ms-flexbox !important;display: -webkit-flex !important;display: flex !important;}
+#contact_widget_button .d-none {display: none !important;}
+#contact_widget_button .align-items-start {-ms-flex-align: start !important;align-items: flex-start !important;}
+#contact_widget_button .flex-column {-ms-flex-direction: column !important;flex-direction: column !important;}
+#contact_widget_button a { text-decoration: none !important; }
+
+@-webkit-keyframes pulsation { 0%{-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);opacity:1} 50%{opacity:.5} to{-ms-transform:scale(1);-webkit-transform:scale(1);transform:scale(1);opacity:0}}
+@keyframes pulsation { 0%{-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);opacity:1} 50%{opacity:.5} to{-ms-transform:scale(1);-webkit-transform:scale(1);transform:scale(1);opacity:0}}
+@-webkit-keyframes iconOpacity {0%{opacity:0}	40%{opacity:.96}	60%{opacity:1}	80%{opacity:.96}	100%{opacity:0}}
+@keyframes iconOpacity {0%{opacity:0} 40%{opacity:.96} 60%{opacity:1} 80%{opacity:.96} 100%{opacity:0}}
+@-webkit-keyframes dotScale {0%{r: 4} 50%{r: 5} 100%{r: 4}}
+@keyframes dotScale {0%{r: 4} 50%{r: 5} 100%{r: 4}}
+#contact_widget_button{background:#23263C; position:fixed;right:15px;bottom:15px;width:50px;height:50px;border-radius:100%;cursor:pointer;z-index:1001;} /* green #25d366 */
+#contact_widget_button.clicked{z-index:1041}
+#contact_widget_substrate{position:fixed;top:0;right:0;bottom:0;left:0;background:transparent;z-index:0;display:none}
+#contact_widget_substrate.active{z-index:1020;display:block}
+.contact-widget-pulsation{background: #ea33c0; width:80px;height:80px;border-radius:50px;position:absolute;left:-15px;top:-15px;z-index:-1;-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);-webkit-animation:pulsation 2s infinite;animation:pulsation 3s infinite}
+.contact-widget-pulsation-second{background: #ea33c0; width:90px;height:90px;border-radius:50px;position:absolute;left:-10px;top:-10px;z-index:-1;-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);-webkit-animation:pulsation 2s infinite;animation:pulsation 3s  infinite; animation-delay: 200ms;}
+.contact-widget-icon{color:#fff;width:100%;height:100%;font-size:32px; background: #23263C; border-radius: 100%; transition: .2s ease}
+.contact-widget-icon .chat-icon {margin-right: 20px;}
+.contact-widget-icon .chat-icon .dot-one { animation:dotScale 2s infinite; -webkit-animation: dotScale 2s infinite; -moz-animation: dotScale 2s infinite;-o-animation: dotScale 2s infinite;}
+.contact-widget-icon .chat-icon .dot-two { animation:dotScale 2s infinite; -webkit-animation: dotScale 2s infinite; -moz-animation: dotScale 2s infinite;-o-animation: dotScale 2s infinite; animation-delay: 400ms}
+.contact-widget-icon .chat-icon .dot-three { animation:dotScale 2s infinite; -webkit-animation: dotScale 2s infinite; -moz-animation: dotScale 2s infinite;-o-animation:dotScale 2s infinite; animation-delay: 600ms}
+.contact-widget-text{font-size:7px;text-transform:uppercase;line-height:9px;color:#fff}
+.contact-widget-dropdown{position:absolute;bottom:40px;left: 50%; transform: translateX(-50%);padding:12px;border-radius:44px;background:#fff;display:block;opacity:0;z-index:-1;-webkit-transition:margin-bottom .3s ease,opacity .3s ease;transition:margin-bottom .3s ease,opacity .3s ease;box-shadow: 0px 4px 18px rgba(35, 38, 60, 0.14);;visibility:hidden;min-width:88px}
+.contact-widget-dropdown.expanded{margin-bottom:0;opacity:1;visibility:visible}
+.contact-widget-dropdown.expanded.contact-widget-item{display:block;}
+.contact-widget-item{color:#333;}
+.contact-widget-item:hover {transform: scale(1.2); transition: .2s ease;}
+.contact-widget-item:not(:last-child){margin-bottom:16px}
+.contact-widget-item:last-child{margin-bottom:48px}
+.contact-widget-item-icon{font-size:32px; display:block;max-width:64px;width:64px;height:64px;border-radius:100%;color:#fff}
+.contact-widget-item-icon .chat-icon {width:32px!important;height:32px}
+.contact-widget-messenger{background:#1E88E5}
+.contact-widget-viber{background:#7360F2}
+.contact-widget-telegram{background:#28A8EA}
+.contact-widget-instagram{background: linear-gradient(132.88deg, #7831FA -8.28%, #F4018F 36.86%, #FCC300 96.43%);}
+.contact-widget-skype{background:#31c4ed}
+.contact-widget-whatsapp{background:#25D366}
+.contact-widget-email{background:#50a8ff}
+.contact-widget-call{background:#3cba8b}
+.contact-widget-contacts{background:#141e1a}
+
+@media (min-width: 420px) {
+	#contact_widget_button{right:30px;width:70px;height:70px}
+	.contact-widget-pulsation{width:100px;height:100px}
+	.contact-widget-icon{font-size:28px}
+	.contact-widget-icon .fa-envelope{width:28px;height:28px}
+	.contact-widget-text{font-size:9px;line-height:10px}
+	.contact-widget-dropdown{right:60px}
+}
+@media (min-width: 992px) {
+#contact_widget_button{bottom:30px}
+	#contact_widget_button .contact-widget-viber-mobile{display:none!important}
+}
+@media (max-width: 991px) {
+	#contact_widget_button .contact-widget-viber-desktop{display:none!important}
+}
+/* [End] Contact widget button */
