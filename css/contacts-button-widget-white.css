@@ -28,10 +28,10 @@
 #contact_widget_button.clicked{z-index:1041}
 #contact_widget_substrate{position:fixed;top:0;right:0;bottom:0;left:0;background:transparent;z-index:0;display:none}
 #contact_widget_substrate.active{z-index:1020;display:block}
-#contact-message-icon {fill: #ea33c0;width: 50px;height: 38px;}
-#contact-message-icon circle {fill: #23263C !important;}
-.contact-widget-pulsation{background: #ea33c0; width:80px;height:80px;border-radius:50px;position:absolute;left:-15px;top:-15px;z-index:-1;-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);-webkit-animation:pulsation 2s infinite;animation:pulsation 3s infinite}
-.contact-widget-pulsation-second{background: #ea33c0; width:90px;height:90px;border-radius:50px;position:absolute;left:-20px;top:-20px;z-index:-1;-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);-webkit-animation:pulsation 2s infinite;animation:pulsation 3s  infinite; animation-delay: 200ms;}
+#contact-message-icon {fill: #4CAAFC;width: 50px;height: 38px;}
+#contact-message-icon circle {fill: #fff !important;}
+.contact-widget-pulsation{background: #4CAAFC; width:80px;height:80px;border-radius:50px;position:absolute;left:-15px;top:-15px;z-index:-1;-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);-webkit-animation:pulsation 2s infinite;animation:pulsation 3s infinite}
+.contact-widget-pulsation-second{background: #4CAAFC; width:90px;height:90px;border-radius:50px;position:absolute;left:-20px;top:-20px;z-index:-1;-ms-transform:scale(0);-webkit-transform:scale(0);transform:scale(0);-webkit-animation:pulsation 2s infinite;animation:pulsation 3s  infinite; animation-delay: 200ms;}
 .contact-widget-icon{color:#fff;width:100%;height:100%;font-size:32px; background: #23263C; border-radius: 100%; transition: .2s ease}
 .contact-widget-icon .chat-icon {margin-right: 20px;}
 .contact-widget-icon .chat-icon .dot-one { animation:dotScale 2s infinite; -webkit-animation: dotScale 2s infinite; -moz-animation: dotScale 2s infinite;-o-animation: dotScale 2s infinite;}
