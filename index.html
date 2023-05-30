@@ -12,7 +12,7 @@
         <template id="snippet-tpl" type="text/html">
             <!-- Add code before the end of </body> tag -->
             <div id="contact_widget_substrate"></div>
-            <div id="contact_widget_button" class="d-flex align-items-center justify-content-center">
+            <div id="contact_widget_button" class="d-flex align-items-center justify-content-center $selector">
                 <div class="contact-widget-pulsation"></div>
                 <div class="contact-widget-pulsation-second"></div>
                 <div class="contact-widget-icon text-center d-flex align-items-center justify-content-center">
@@ -67,10 +67,8 @@
             window.social.viber = 'viber://pa?chatURI=' + window.social.viber;
             window.social.email = window.social.email;
             window.social.phone = window.social.phone;
+            window.social.selector = window.social.selector ? window.social.selector : 'right';
 
-            const { selector = 'right' } = window.social
-
-            
             $(document).ready(function() {
                 
                 setTimeout(function() {
@@ -82,11 +80,10 @@
                     html = html.replaceAll('$viber', window.social.viber);
                     html = html.replaceAll('$email', window.social.email);
                     html = html.replaceAll('$phone', window.social.phone);
-                    
+                    html = html.replaceAll('$selector', window.social.selector);
+
                     $('#code').html(Prism.highlight(html, Prism.languages.markup, 'markup'));
                     $('#example_widget').html(html);
-
-                    $('#contact_widget_button').addClass(selector)
                 }, 500);
             });
         </script>
