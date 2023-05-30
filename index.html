@@ -12,7 +12,7 @@
         <template id="snippet-tpl" type="text/html">
             <!-- Add code before the end of </body> tag -->
             <div id="contact_widget_substrate"></div>
-            <div id="contact_widget_button" class="d-flex align-items-center justify-content-center">
+            <div id="contact_widget_button" class="d-flex align-items-center justify-content-center $selector">
                 <div class="contact-widget-pulsation"></div>
                 <div class="contact-widget-pulsation-second"></div>
                 <div class="contact-widget-icon text-center d-flex align-items-center justify-content-center">
@@ -44,7 +44,7 @@
             </div>
 
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet" media="screen" />
-            <link href="https://widget.rushsender.com/css/contacts-button-widget-pink.css" rel="stylesheet" media="screen" />
+            <link href="https://widget.rushsender.com/css/contacts-button-widget-$color.css" rel="stylesheet" media="screen" />
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
             <script src="https://widget.rushsender.com/js/contacts-button-widget-v2.js"></script>
         </template>
@@ -67,12 +67,10 @@
             window.social.viber = 'viber://pa?chatURI=' + window.social.viber;
             window.social.email = window.social.email;
             window.social.phone = window.social.phone;
+            window.social.selector = window.social.selector ? window.social.selector : 'right';
+            window.social.color = window.social.color ? window.social.color : 'blue';
 
-            const { selector = 'right' } = window.social
-
-            
             $(document).ready(function() {
-                
                 setTimeout(function() {
                     let html = $('#snippet-tpl')[0].innerHTML;
                     html = html.replaceAll('$instagram', window.social.instagram);
@@ -82,11 +80,11 @@
                     html = html.replaceAll('$viber', window.social.viber);
                     html = html.replaceAll('$email', window.social.email);
                     html = html.replaceAll('$phone', window.social.phone);
-                    
+                    html = html.replaceAll('$selector', window.social.selector);
+                    html = html.replaceAll('$color', window.social.color);
+
                     $('#code').html(Prism.highlight(html, Prism.languages.markup, 'markup'));
                     $('#example_widget').html(html);
-
-                    $('#contact_widget_button').addClass(selector)
                 }, 500);
             });
         </script>
