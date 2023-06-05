@@ -35,7 +35,7 @@ window.contactWidgetInit = function () {
 	});
 };
 
-window._contactWidgetInit() = function () {
+window._contactWidgetInit = function () {
     if (document.readyState != 'loading'){
         window.contactWidgetInit(); // Or the function you want to run
     } else {
