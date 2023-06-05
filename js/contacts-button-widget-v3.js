@@ -35,10 +35,12 @@ window.contactWidgetInit = function () {
 	});
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-	if (document.readyState !== 'loading') {
-		window.contactWidgetInit();
-	} else {
-		document.addEventListener('DOMContentLoaded', window.contactWidgetInit);
-	}
-});
+window._contactWidgetInit() = function () {
+    if (document.readyState != 'loading'){
+        window.contactWidgetInit(); // Or the function you want to run
+    } else {
+        document.addEventListener('DOMContentLoaded', window.contactWidgetInit);
+    }
+}
+
+window._contactWidgetInit();
