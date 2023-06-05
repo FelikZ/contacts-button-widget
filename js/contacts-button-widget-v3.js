@@ -36,9 +36,9 @@ window.contactWidgetInit = function () {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', window.contactWidgetInit);
-	} else {
+	if (document.readyState !== 'loading') {
 		window.contactWidgetInit();
+	} else {
+		document.addEventListener('DOMContentLoaded', window.contactWidgetInit);
 	}
 });
