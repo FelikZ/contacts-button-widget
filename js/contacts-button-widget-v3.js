@@ -1,6 +1,7 @@
 window.contactWidgetInit = function () {
 	document.getElementById('contact_widget_button').addEventListener('click', function () {
 		this.classList.toggle('clicked');
+
 		document.querySelector('.contact-widget-dropdown').classList.toggle('expanded');
 		document.querySelectorAll('.contact-widget-icon .fa-envelope, #back-top').forEach(function (el) {
 			el.classList.remove('d-none');
