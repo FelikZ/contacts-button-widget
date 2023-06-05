@@ -33,11 +33,13 @@ window.contactWidgetInit = function () {
 	document.querySelector('.contact-widget-dropdown').addEventListener('click', function (e) {
 		e.stopPropagation();
 	});
+
+	div.style.display = '';
 };
 
 window._contactWidgetInit = function () {
     if (document.readyState != 'loading'){
-        window.contactWidgetInit(); // Or the function you want to run
+        window.contactWidgetInit();
     } else {
         document.addEventListener('DOMContentLoaded', window.contactWidgetInit);
     }
