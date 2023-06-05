@@ -1,5 +1,5 @@
 window.contactWidgetInit = function () {
-	document.getElementById('contact_widget_button').addEventListener('click', function () {
+	var contact_widget_button = document.getElementById('contact_widget_button').addEventListener('click', function () {
 		this.classList.toggle('clicked');
 
 		document.querySelector('.contact-widget-dropdown').classList.toggle('expanded');
@@ -34,7 +34,7 @@ window.contactWidgetInit = function () {
 		e.stopPropagation();
 	});
 
-	div.style.display = '';
+	contact_widget_button.style.display = '';
 };
 
 window._contactWidgetInit = function () {
