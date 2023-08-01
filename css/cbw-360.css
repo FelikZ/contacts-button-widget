@@ -3,6 +3,7 @@
  */
 
 #contact_widget_button {visibility: hidden !important;}
+#contact-widget-dropdown {visibility: hidden !important;}
 /* [START] Contact widget button */
 #contact_widget_button {font-family: sans-serif; font-size: 14px; line-height: 1.15;}
 #contact_widget_button * {outline: none;}
